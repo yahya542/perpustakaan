@@ -20,7 +20,7 @@ def koneksi_db():
     except pymysql.MySQLError as e:
         console.print(f"Kesalahan koneksi database: {e}", style="red")
         return None
-2
+
 def tambah_buku(judul, penulis, tahun_terbit):
     db = koneksi_db()
     if db is None:
@@ -59,7 +59,7 @@ def tampilkan_buku():
         # Panel untuk membungkus tabel
         console.print(table, style="white")  # Panel dengan latar belakang putih
     except pymysql.MySQLError as d:
-        console.print(f"Kesalahan saat mengambil buku: {del}", style="red")
+        console.print(f"Kesalahan saat mengambil buku: {d}", style="red")
     
 
 
